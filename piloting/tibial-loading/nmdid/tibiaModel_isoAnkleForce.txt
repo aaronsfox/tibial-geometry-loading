@@ -1,0 +1,883 @@
+===========================================================================
+         ________    _________   _______       __     _________            
+        |        |\ |        |\ |       \\    |  |\  /         \\          
+        |    ____|| |    ____|| |    __  ||   |__|| |    ___    ||         
+        |   |\___\| |   |\___\| |   |\_| ||    \_\| |   //  \   ||         
+        |   ||__    |   ||__    |   ||_| ||   |  |\ |  ||    |  ||         
+        |       |\  |       |\  |         \\  |  || |  ||    |  ||         
+        |    ___||  |    ___||  |    ___   || |  || |  ||    |  ||         
+        |   |\__\|  |   |\__\|  |   |\__|  || |  || |  ||    |  ||         
+        |   ||      |   ||___   |   ||__|  || |  || |   \\__/   ||         
+        |   ||      |        |\ |          || |  || |           ||         
+        |___||      |________|| |_________//  |__||  \_________//          
+                                                                           
+      F I N I T E   E L E M E N T S   F O R   B I O M E C H A N I C S      
+                                                                           
+  version 3.4.0
+  FEBio is a registered trademark.                                         
+  copyright (c) 2006-2021 - All rights reserved                            
+                                                                           
+===========================================================================
+
+
+
+
+
+ FILES USED
+===========================================================================
+	Input file : C:\+GitRepos+\tibial-geometry\piloting\tibial-loading\nmdid\tibiaModel_isoAnkleForce.feb
+	Plot file  : C:\+GitRepos+\tibial-geometry\piloting\tibial-loading\nmdid\tibiaModel_isoAnkleForce.xplt
+	Log file   : C:\+GitRepos+\tibial-geometry\piloting\tibial-loading\nmdid\tibiaModel_isoAnkleForce.txt
+
+
+ MESH INFO
+===========================================================================
+	Number of materials ............................ : 2
+	Number of domains .............................. : 2
+	Number of nodes ................................ : 9726
+	Number of solid elements ....................... : 52018
+
+
+ CONTROL DATA
+===========================================================================
+	Module type .................................... : solid
+	Analysis type .................................. : quasi-static
+	Number of timesteps ............................ : 10
+	Time step size ................................. : 0.1
+	Auto time stepper activated .................... : yes
+	  Optimal nr of iterations ..................... : 6
+	  Minimum allowable step size .................. : 0.001
+	  Maximum allowable step size .................. : 0.1
+	Number of load controllers ..................... : 1
+
+
+ SOLVER PARAMETERS
+===========================================================================
+	symmetric_stiffness ............................... : 1
+	equation_scheme ................................... : 0
+	equation_order .................................... : 0
+	optimize_bw ....................................... : 0
+	lstol ............................................. : 0.9
+	lsmin ............................................. : 0.01
+	lsiter ............................................ : 5
+	max_refs .......................................... : 25
+	check_zero_diagonal ............................... : false
+	zero_diagonal_tol ................................. : 0
+	force_partition ................................... : 0
+	reform_each_time_step ............................. : true
+	reform_augment .................................... : false
+	diverge_reform .................................... : true
+	do_reforms ........................................ : true
+	etol .............................................. : 0.01
+	rtol .............................................. : 0
+	min_residual ...................................... : 1e-20
+	max_residual ...................................... : 0
+	qnmethod .......................................... : 0
+	max_ups ........................................... : 0
+	qn_max_buffer_size ................................ : 0
+	qn_cycle_buffer ................................... : true
+	cmax .............................................. : 100000
+	dtol .............................................. : 0.001
+	rhoi .............................................. : -2
+	alpha ............................................. : 1
+	beta .............................................. : 0.25
+	gamma ............................................. : 0.5
+	logSolve .......................................... : false
+	arc_length ........................................ : 0
+	arc_length_scale .................................. : 0
+
+
+ OUTPUT DATA
+===========================================================================
+	plot level ................................ : major iterations
+	plotfile format ........................... : FEBIO
+		Nodal Variables:
+			displacement         (type = vec3f, format = NODE)
+			reaction forces      (type = vec3f, format = NODE)
+		Domain Variables:
+			stress               (type = mat3fs, format = ITEM)
+			relative volume      (type = float, format = ITEM)
+		Surface Variables:
+			contact pressure     (type = float, format = ITEM)
+
+
+ MATERIAL DATA
+===========================================================================
+  1 - corticalMat (type: neo-Hookean)
+	mat_axis .......................................... : (can't display value)
+	density ........................................... : 1
+	secant_tangent .................................... : false
+	secant_stress ..................................... : false
+	E ................................................. : 18600
+	v ................................................. : 0.3
+---------------------------------------------------------------------------
+  2 - trabecularMat (type: neo-Hookean)
+	mat_axis .......................................... : (can't display value)
+	density ........................................... : 1
+	secant_tangent .................................... : false
+	secant_stress ..................................... : false
+	E ................................................. : 10400
+	v ................................................. : 0.3
+
+
+ BOUNDARY CONDITION DATA
+===========================================================================
+  1 -  Type: fix
+	dofs .............................................. : 0, 1, 2
+---------------------------------------------------------------------------
+  2 -  Type: fix
+	dofs .............................................. : 3, 4, 5
+---------------------------------------------------------------------------
+  3 -  Type: fix
+	dofs .............................................. : 0, 2
+
+
+ NODAL LOAD DATA
+===========================================================================
+  1 -  Type: nodal_force
+	relative .......................................... : false
+	value ............................................. : (not constant)
+
+
+ LINEAR SOLVER DATA
+===========================================================================
+	Solver type ....................................... : pardiso
+	Matrix format ..................................... : symmetric
+
+
+===== beginning time step 1 : 0.1 =====
+
+
+Reforming stiffness matrix: reformation #1
+
+===== reforming stiffness matrix:
+	Nr of equations ........................... : 28594
+	Nr of nonzeroes in stiffness matrix ....... : 624511
+ 1
+ Nonlinear solution status: time= 0.1
+	stiffness updates             = 0
+	right hand side evaluations   = 2
+	stiffness matrix reformations = 1
+	step from line search         = 1.000000
+	convergence norms :     INITIAL         CURRENT         REQUIRED
+	   residual            8.999856e+05    1.839428e+01    0.000000e+00 
+	   energy              5.368380e+01    6.270244e-02    5.368380e-01 
+	   displacement        9.729598e+00    9.729598e+00    9.729598e-06 
+Reforming stiffness matrix: reformation #2
+
+ 2
+ Nonlinear solution status: time= 0.1
+	stiffness updates             = 0
+	right hand side evaluations   = 3
+	stiffness matrix reformations = 2
+	step from line search         = 1.000000
+	convergence norms :     INITIAL         CURRENT         REQUIRED
+	   residual            8.999856e+05    3.615254e-07    0.000000e+00 
+	   energy              5.368380e+01    1.587906e-07    5.368380e-01 
+	   displacement        9.729598e+00    1.094781e-03    9.892304e-06 
+Reforming stiffness matrix: reformation #3
+
+ 3
+ Nonlinear solution status: time= 0.1
+	stiffness updates             = 0
+	right hand side evaluations   = 4
+	stiffness matrix reformations = 3
+	step from line search         = 1.000000
+	convergence norms :     INITIAL         CURRENT         REQUIRED
+	   residual            8.999856e+05    1.435755e-13    0.000000e+00 
+	   energy              5.368380e+01    1.390681e-17    5.368380e-01 
+	   displacement        9.729598e+00    2.898458e-11    9.892330e-06 
+
+convergence summary
+    number of iterations   : 3
+    number of reformations : 3
+
+------- converged at time : 0.1
+
+
+Data Record #1
+===========================================================================
+Step = 1
+Time = 0.1
+Data = ux;uy;uz
+File = C:\+GitRepos+\tibial-geometry\piloting\tibial-loading\nmdid\tibiaModel_isoAnkleForce_disp_out.txt
+
+Data Record #2
+===========================================================================
+Step = 1
+Time = 0.1
+Data = s1;s2;s3
+File = C:\+GitRepos+\tibial-geometry\piloting\tibial-loading\nmdid\tibiaModel_isoAnkleForce_stress_out.txt
+
+Data Record #3
+===========================================================================
+Step = 1
+Time = 0.1
+Data = sed
+File = C:\+GitRepos+\tibial-geometry\piloting\tibial-loading\nmdid\tibiaModel_isoAnkleForce_energy_out.txt
+
+===== beginning time step 2 : 0.2 =====
+
+
+Reforming stiffness matrix: reformation #1
+
+ 1
+ Nonlinear solution status: time= 0.2
+	stiffness updates             = 0
+	right hand side evaluations   = 2
+	stiffness matrix reformations = 1
+	step from line search         = 1.000000
+	convergence norms :     INITIAL         CURRENT         REQUIRED
+	   residual            8.999856e+05    1.995296e+01    0.000000e+00 
+	   energy              5.381462e+01    6.664278e-02    5.381462e-01 
+	   displacement        1.005974e+01    1.005974e+01    1.005974e-05 
+Reforming stiffness matrix: reformation #2
+
+ 2
+ Nonlinear solution status: time= 0.2
+	stiffness updates             = 0
+	right hand side evaluations   = 3
+	stiffness matrix reformations = 2
+	step from line search         = 1.000000
+	convergence norms :     INITIAL         CURRENT         REQUIRED
+	   residual            8.999856e+05    4.349448e-07    0.000000e+00 
+	   energy              5.381462e+01    1.830744e-07    5.381462e-01 
+	   displacement        1.005974e+01    1.201493e-03    1.023457e-05 
+Reforming stiffness matrix: reformation #3
+
+ 3
+ Nonlinear solution status: time= 0.2
+	stiffness updates             = 0
+	right hand side evaluations   = 4
+	stiffness matrix reformations = 3
+	step from line search         = 1.000000
+	convergence norms :     INITIAL         CURRENT         REQUIRED
+	   residual            8.999856e+05    1.370707e-13    0.000000e+00 
+	   energy              5.381462e+01    4.785323e-19    5.381462e-01 
+	   displacement        1.005974e+01    3.650177e-11    1.023460e-05 
+
+convergence summary
+    number of iterations   : 3
+    number of reformations : 3
+
+------- converged at time : 0.2
+
+
+Data Record #1
+===========================================================================
+Step = 2
+Time = 0.2
+Data = ux;uy;uz
+File = C:\+GitRepos+\tibial-geometry\piloting\tibial-loading\nmdid\tibiaModel_isoAnkleForce_disp_out.txt
+
+Data Record #2
+===========================================================================
+Step = 2
+Time = 0.2
+Data = s1;s2;s3
+File = C:\+GitRepos+\tibial-geometry\piloting\tibial-loading\nmdid\tibiaModel_isoAnkleForce_stress_out.txt
+
+Data Record #3
+===========================================================================
+Step = 2
+Time = 0.2
+Data = sed
+File = C:\+GitRepos+\tibial-geometry\piloting\tibial-loading\nmdid\tibiaModel_isoAnkleForce_energy_out.txt
+
+===== beginning time step 3 : 0.3 =====
+
+
+Reforming stiffness matrix: reformation #1
+
+ 1
+ Nonlinear solution status: time= 0.3
+	stiffness updates             = 0
+	right hand side evaluations   = 2
+	stiffness matrix reformations = 1
+	step from line search         = 1.000000
+	convergence norms :     INITIAL         CURRENT         REQUIRED
+	   residual            8.999856e+05    2.170522e+01    0.000000e+00 
+	   energy              5.395378e+01    7.088510e-02    5.395378e-01 
+	   displacement        1.041460e+01    1.041460e+01    1.041460e-05 
+Reforming stiffness matrix: reformation #2
+
+ 2
+ Nonlinear solution status: time= 0.3
+	stiffness updates             = 0
+	right hand side evaluations   = 3
+	stiffness matrix reformations = 2
+	step from line search         = 1.000000
+	convergence norms :     INITIAL         CURRENT         REQUIRED
+	   residual            8.999856e+05    5.252281e-07    0.000000e+00 
+	   energy              5.395378e+01    2.116880e-07    5.395378e-01 
+	   displacement        1.041460e+01    1.321105e-03    1.060275e-05 
+Reforming stiffness matrix: reformation #3
+
+ 3
+ Nonlinear solution status: time= 0.3
+	stiffness updates             = 0
+	right hand side evaluations   = 4
+	stiffness matrix reformations = 3
+	step from line search         = 1.000000
+	convergence norms :     INITIAL         CURRENT         REQUIRED
+	   residual            8.999856e+05    1.391112e-13    0.000000e+00 
+	   energy              5.395378e+01    5.638599e-18    5.395378e-01 
+	   displacement        1.041460e+01    4.618478e-11    1.060278e-05 
+
+convergence summary
+    number of iterations   : 3
+    number of reformations : 3
+
+------- converged at time : 0.3
+
+
+Data Record #1
+===========================================================================
+Step = 3
+Time = 0.3
+Data = ux;uy;uz
+File = C:\+GitRepos+\tibial-geometry\piloting\tibial-loading\nmdid\tibiaModel_isoAnkleForce_disp_out.txt
+
+Data Record #2
+===========================================================================
+Step = 3
+Time = 0.3
+Data = s1;s2;s3
+File = C:\+GitRepos+\tibial-geometry\piloting\tibial-loading\nmdid\tibiaModel_isoAnkleForce_stress_out.txt
+
+Data Record #3
+===========================================================================
+Step = 3
+Time = 0.3
+Data = sed
+File = C:\+GitRepos+\tibial-geometry\piloting\tibial-loading\nmdid\tibiaModel_isoAnkleForce_energy_out.txt
+
+===== beginning time step 4 : 0.4 =====
+
+
+Reforming stiffness matrix: reformation #1
+
+ 1
+ Nonlinear solution status: time= 0.4
+	stiffness updates             = 0
+	right hand side evaluations   = 2
+	stiffness matrix reformations = 1
+	step from line search         = 1.000000
+	convergence norms :     INITIAL         CURRENT         REQUIRED
+	   residual            8.999856e+05    2.368042e+01    0.000000e+00 
+	   energy              5.410191e+01    7.545920e-02    5.410191e-01 
+	   displacement        1.079661e+01    1.079661e+01    1.079661e-05 
+Reforming stiffness matrix: reformation #2
+
+ 2
+ Nonlinear solution status: time= 0.4
+	stiffness updates             = 0
+	right hand side evaluations   = 3
+	stiffness matrix reformations = 2
+	step from line search         = 1.000000
+	convergence norms :     INITIAL         CURRENT         REQUIRED
+	   residual            8.999856e+05    6.367121e-07    0.000000e+00 
+	   energy              5.410191e+01    2.455164e-07    5.410191e-01 
+	   displacement        1.079661e+01    1.455482e-03    1.099940e-05 
+Reforming stiffness matrix: reformation #3
+
+ 3
+ Nonlinear solution status: time= 0.4
+	stiffness updates             = 0
+	right hand side evaluations   = 4
+	stiffness matrix reformations = 3
+	step from line search         = 1.000000
+	convergence norms :     INITIAL         CURRENT         REQUIRED
+	   residual            8.999856e+05    1.352100e-13    0.000000e+00 
+	   energy              5.410191e+01    8.290554e-18    5.410191e-01 
+	   displacement        1.079661e+01    5.872179e-11    1.099944e-05 
+
+convergence summary
+    number of iterations   : 3
+    number of reformations : 3
+
+------- converged at time : 0.4
+
+
+Data Record #1
+===========================================================================
+Step = 4
+Time = 0.4
+Data = ux;uy;uz
+File = C:\+GitRepos+\tibial-geometry\piloting\tibial-loading\nmdid\tibiaModel_isoAnkleForce_disp_out.txt
+
+Data Record #2
+===========================================================================
+Step = 4
+Time = 0.4
+Data = s1;s2;s3
+File = C:\+GitRepos+\tibial-geometry\piloting\tibial-loading\nmdid\tibiaModel_isoAnkleForce_stress_out.txt
+
+Data Record #3
+===========================================================================
+Step = 4
+Time = 0.4
+Data = sed
+File = C:\+GitRepos+\tibial-geometry\piloting\tibial-loading\nmdid\tibiaModel_isoAnkleForce_energy_out.txt
+
+===== beginning time step 5 : 0.5 =====
+
+
+Reforming stiffness matrix: reformation #1
+
+ 1
+ Nonlinear solution status: time= 0.5
+	stiffness updates             = 0
+	right hand side evaluations   = 2
+	stiffness matrix reformations = 1
+	step from line search         = 1.000000
+	convergence norms :     INITIAL         CURRENT         REQUIRED
+	   residual            8.999856e+05    2.591314e+01    0.000000e+00 
+	   energy              5.425975e+01    8.039843e-02    5.425975e-01 
+	   displacement        1.120848e+01    1.120848e+01    1.120848e-05 
+Reforming stiffness matrix: reformation #2
+
+ 2
+ Nonlinear solution status: time= 0.5
+	stiffness updates             = 0
+	right hand side evaluations   = 3
+	stiffness matrix reformations = 2
+	step from line search         = 1.000000
+	convergence norms :     INITIAL         CURRENT         REQUIRED
+	   residual            8.999856e+05    7.749707e-07    0.000000e+00 
+	   energy              5.425975e+01    2.856495e-07    5.425975e-01 
+	   displacement        1.120848e+01    1.606804e-03    1.142741e-05 
+Reforming stiffness matrix: reformation #3
+
+ 3
+ Nonlinear solution status: time= 0.5
+	stiffness updates             = 0
+	right hand side evaluations   = 4
+	stiffness matrix reformations = 3
+	step from line search         = 1.000000
+	convergence norms :     INITIAL         CURRENT         REQUIRED
+	   residual            8.999856e+05    1.390785e-13    0.000000e+00 
+	   energy              5.425975e+01    1.374083e-18    5.425975e-01 
+	   displacement        1.120848e+01    7.504093e-11    1.142745e-05 
+
+convergence summary
+    number of iterations   : 3
+    number of reformations : 3
+
+------- converged at time : 0.5
+
+
+Data Record #1
+===========================================================================
+Step = 5
+Time = 0.5
+Data = ux;uy;uz
+File = C:\+GitRepos+\tibial-geometry\piloting\tibial-loading\nmdid\tibiaModel_isoAnkleForce_disp_out.txt
+
+Data Record #2
+===========================================================================
+Step = 5
+Time = 0.5
+Data = s1;s2;s3
+File = C:\+GitRepos+\tibial-geometry\piloting\tibial-loading\nmdid\tibiaModel_isoAnkleForce_stress_out.txt
+
+Data Record #3
+===========================================================================
+Step = 5
+Time = 0.5
+Data = sed
+File = C:\+GitRepos+\tibial-geometry\piloting\tibial-loading\nmdid\tibiaModel_isoAnkleForce_energy_out.txt
+
+===== beginning time step 6 : 0.6 =====
+
+
+Reforming stiffness matrix: reformation #1
+
+ 1
+ Nonlinear solution status: time= 0.6
+	stiffness updates             = 0
+	right hand side evaluations   = 2
+	stiffness matrix reformations = 1
+	step from line search         = 1.000000
+	convergence norms :     INITIAL         CURRENT         REQUIRED
+	   residual            8.999856e+05    2.844428e+01    0.000000e+00 
+	   energy              5.442809e+01    8.574030e-02    5.442809e-01 
+	   displacement        1.165327e+01    1.165327e+01    1.165327e-05 
+Reforming stiffness matrix: reformation #2
+
+ 2
+ Nonlinear solution status: time= 0.6
+	stiffness updates             = 0
+	right hand side evaluations   = 3
+	stiffness matrix reformations = 2
+	step from line search         = 1.000000
+	convergence norms :     INITIAL         CURRENT         REQUIRED
+	   residual            8.999856e+05    9.472077e-07    0.000000e+00 
+	   energy              5.442809e+01    3.334353e-07    5.442809e-01 
+	   displacement        1.165327e+01    1.777625e-03    1.189001e-05 
+Reforming stiffness matrix: reformation #3
+
+ 3
+ Nonlinear solution status: time= 0.6
+	stiffness updates             = 0
+	right hand side evaluations   = 4
+	stiffness matrix reformations = 3
+	step from line search         = 1.000000
+	convergence norms :     INITIAL         CURRENT         REQUIRED
+	   residual            8.999856e+05    1.367846e-13    0.000000e+00 
+	   energy              5.442809e+01    1.998230e-17    5.442809e-01 
+	   displacement        1.165327e+01    9.640158e-11    1.189006e-05 
+
+convergence summary
+    number of iterations   : 3
+    number of reformations : 3
+
+------- converged at time : 0.6
+
+
+Data Record #1
+===========================================================================
+Step = 6
+Time = 0.6
+Data = ux;uy;uz
+File = C:\+GitRepos+\tibial-geometry\piloting\tibial-loading\nmdid\tibiaModel_isoAnkleForce_disp_out.txt
+
+Data Record #2
+===========================================================================
+Step = 6
+Time = 0.6
+Data = s1;s2;s3
+File = C:\+GitRepos+\tibial-geometry\piloting\tibial-loading\nmdid\tibiaModel_isoAnkleForce_stress_out.txt
+
+Data Record #3
+===========================================================================
+Step = 6
+Time = 0.6
+Data = sed
+File = C:\+GitRepos+\tibial-geometry\piloting\tibial-loading\nmdid\tibiaModel_isoAnkleForce_energy_out.txt
+
+===== beginning time step 7 : 0.7 =====
+
+
+Reforming stiffness matrix: reformation #1
+
+ 1
+ Nonlinear solution status: time= 0.7
+	stiffness updates             = 0
+	right hand side evaluations   = 2
+	stiffness matrix reformations = 1
+	step from line search         = 1.000000
+	convergence norms :     INITIAL         CURRENT         REQUIRED
+	   residual            8.999856e+05    3.132237e+01    0.000000e+00 
+	   energy              5.460780e+01    9.152701e-02    5.460780e-01 
+	   displacement        1.213443e+01    1.213443e+01    1.213443e-05 
+Reforming stiffness matrix: reformation #2
+
+ 2
+ Nonlinear solution status: time= 0.7
+	stiffness updates             = 0
+	right hand side evaluations   = 3
+	stiffness matrix reformations = 2
+	step from line search         = 1.000000
+	convergence norms :     INITIAL         CURRENT         REQUIRED
+	   residual            8.999856e+05    1.162779e-06    0.000000e+00 
+	   energy              5.460780e+01    3.905478e-07    5.460780e-01 
+	   displacement        1.213443e+01    1.970949e-03    1.239087e-05 
+Reforming stiffness matrix: reformation #3
+
+ 3
+ Nonlinear solution status: time= 0.7
+	stiffness updates             = 0
+	right hand side evaluations   = 4
+	stiffness matrix reformations = 3
+	step from line search         = 1.000000
+	convergence norms :     INITIAL         CURRENT         REQUIRED
+	   residual            8.999856e+05    1.344067e-13    0.000000e+00 
+	   energy              5.460780e+01    2.517497e-17    5.460780e-01 
+	   displacement        1.213443e+01    1.245227e-10    1.239093e-05 
+
+convergence summary
+    number of iterations   : 3
+    number of reformations : 3
+
+------- converged at time : 0.7
+
+
+Data Record #1
+===========================================================================
+Step = 7
+Time = 0.7
+Data = ux;uy;uz
+File = C:\+GitRepos+\tibial-geometry\piloting\tibial-loading\nmdid\tibiaModel_isoAnkleForce_disp_out.txt
+
+Data Record #2
+===========================================================================
+Step = 7
+Time = 0.7
+Data = s1;s2;s3
+File = C:\+GitRepos+\tibial-geometry\piloting\tibial-loading\nmdid\tibiaModel_isoAnkleForce_stress_out.txt
+
+Data Record #3
+===========================================================================
+Step = 7
+Time = 0.7
+Data = sed
+File = C:\+GitRepos+\tibial-geometry\piloting\tibial-loading\nmdid\tibiaModel_isoAnkleForce_energy_out.txt
+
+===== beginning time step 8 : 0.8 =====
+
+
+Reforming stiffness matrix: reformation #1
+
+ 1
+ Nonlinear solution status: time= 0.8
+	stiffness updates             = 0
+	right hand side evaluations   = 2
+	stiffness matrix reformations = 1
+	step from line search         = 1.000000
+	convergence norms :     INITIAL         CURRENT         REQUIRED
+	   residual            8.999856e+05    3.460523e+01    0.000000e+00 
+	   energy              5.479985e+01    9.780620e-02    5.479985e-01 
+	   displacement        1.265583e+01    1.265583e+01    1.265583e-05 
+Reforming stiffness matrix: reformation #2
+
+ 2
+ Nonlinear solution status: time= 0.8
+	stiffness updates             = 0
+	right hand side evaluations   = 3
+	stiffness matrix reformations = 2
+	step from line search         = 1.000000
+	convergence norms :     INITIAL         CURRENT         REQUIRED
+	   residual            8.999856e+05    1.433893e-06    0.000000e+00 
+	   energy              5.479985e+01    4.590762e-07    5.479985e-01 
+	   displacement        1.265583e+01    2.190319e-03    1.293413e-05 
+Reforming stiffness matrix: reformation #3
+
+ 3
+ Nonlinear solution status: time= 0.8
+	stiffness updates             = 0
+	right hand side evaluations   = 4
+	stiffness matrix reformations = 3
+	step from line search         = 1.000000
+	convergence norms :     INITIAL         CURRENT         REQUIRED
+	   residual            8.999856e+05    1.344727e-13    0.000000e+00 
+	   energy              5.479985e+01    4.288752e-17    5.479985e-01 
+	   displacement        1.265583e+01    1.617677e-10    1.293420e-05 
+
+convergence summary
+    number of iterations   : 3
+    number of reformations : 3
+
+------- converged at time : 0.8
+
+
+Data Record #1
+===========================================================================
+Step = 8
+Time = 0.8
+Data = ux;uy;uz
+File = C:\+GitRepos+\tibial-geometry\piloting\tibial-loading\nmdid\tibiaModel_isoAnkleForce_disp_out.txt
+
+Data Record #2
+===========================================================================
+Step = 8
+Time = 0.8
+Data = s1;s2;s3
+File = C:\+GitRepos+\tibial-geometry\piloting\tibial-loading\nmdid\tibiaModel_isoAnkleForce_stress_out.txt
+
+Data Record #3
+===========================================================================
+Step = 8
+Time = 0.8
+Data = sed
+File = C:\+GitRepos+\tibial-geometry\piloting\tibial-loading\nmdid\tibiaModel_isoAnkleForce_energy_out.txt
+
+===== beginning time step 9 : 0.9 =====
+
+
+Reforming stiffness matrix: reformation #1
+
+ 1
+ Nonlinear solution status: time= 0.9
+	stiffness updates             = 0
+	right hand side evaluations   = 2
+	stiffness matrix reformations = 1
+	step from line search         = 1.000000
+	convergence norms :     INITIAL         CURRENT         REQUIRED
+	   residual            8.999856e+05    3.836201e+01    0.000000e+00 
+	   energy              5.500532e+01    1.046317e-01    5.500532e-01 
+	   displacement        1.322190e+01    1.322190e+01    1.322190e-05 
+Reforming stiffness matrix: reformation #2
+
+ 2
+ Nonlinear solution status: time= 0.9
+	stiffness updates             = 0
+	right hand side evaluations   = 3
+	stiffness matrix reformations = 2
+	step from line search         = 1.000000
+	convergence norms :     INITIAL         CURRENT         REQUIRED
+	   residual            8.999856e+05    1.776594e-06    0.000000e+00 
+	   energy              5.500532e+01    5.416392e-07    5.500532e-01 
+	   displacement        1.322190e+01    2.439926e-03    1.352448e-05 
+Reforming stiffness matrix: reformation #3
+
+ 3
+ Nonlinear solution status: time= 0.9
+	stiffness updates             = 0
+	right hand side evaluations   = 4
+	stiffness matrix reformations = 3
+	step from line search         = 1.000000
+	convergence norms :     INITIAL         CURRENT         REQUIRED
+	   residual            8.999856e+05    1.383503e-13    0.000000e+00 
+	   energy              5.500532e+01    1.885114e-17    5.500532e-01 
+	   displacement        1.322190e+01    2.114061e-10    1.352457e-05 
+
+convergence summary
+    number of iterations   : 3
+    number of reformations : 3
+
+------- converged at time : 0.9
+
+
+Data Record #1
+===========================================================================
+Step = 9
+Time = 0.9
+Data = ux;uy;uz
+File = C:\+GitRepos+\tibial-geometry\piloting\tibial-loading\nmdid\tibiaModel_isoAnkleForce_disp_out.txt
+
+Data Record #2
+===========================================================================
+Step = 9
+Time = 0.9
+Data = s1;s2;s3
+File = C:\+GitRepos+\tibial-geometry\piloting\tibial-loading\nmdid\tibiaModel_isoAnkleForce_stress_out.txt
+
+Data Record #3
+===========================================================================
+Step = 9
+Time = 0.9
+Data = sed
+File = C:\+GitRepos+\tibial-geometry\piloting\tibial-loading\nmdid\tibiaModel_isoAnkleForce_energy_out.txt
+
+===== beginning time step 10 : 1 =====
+
+
+Reforming stiffness matrix: reformation #1
+
+ 1
+ Nonlinear solution status: time= 1
+	stiffness updates             = 0
+	right hand side evaluations   = 2
+	stiffness matrix reformations = 1
+	step from line search         = 1.000000
+	convergence norms :     INITIAL         CURRENT         REQUIRED
+	   residual            8.999856e+05    4.267573e+01    0.000000e+00 
+	   energy              5.522542e+01    1.120647e-01    5.522542e-01 
+	   displacement        1.383763e+01    1.383763e+01    1.383763e-05 
+Reforming stiffness matrix: reformation #2
+
+ 2
+ Nonlinear solution status: time= 1
+	stiffness updates             = 0
+	right hand side evaluations   = 3
+	stiffness matrix reformations = 2
+	step from line search         = 1.000000
+	convergence norms :     INITIAL         CURRENT         REQUIRED
+	   residual            8.999856e+05    2.212057e-06    0.000000e+00 
+	   energy              5.522542e+01    6.415360e-07    5.522542e-01 
+	   displacement        1.383763e+01    2.724749e-03    1.416728e-05 
+Reforming stiffness matrix: reformation #3
+
+ 3
+ Nonlinear solution status: time= 1
+	stiffness updates             = 0
+	right hand side evaluations   = 4
+	stiffness matrix reformations = 3
+	step from line search         = 1.000000
+	convergence norms :     INITIAL         CURRENT         REQUIRED
+	   residual            8.999856e+05    1.390483e-13    0.000000e+00 
+	   energy              5.522542e+01    9.486587e-19    5.522542e-01 
+	   displacement        1.383763e+01    2.779945e-10    1.416738e-05 
+
+convergence summary
+    number of iterations   : 3
+    number of reformations : 3
+
+------- converged at time : 1
+
+
+Data Record #1
+===========================================================================
+Step = 10
+Time = 1
+Data = ux;uy;uz
+File = C:\+GitRepos+\tibial-geometry\piloting\tibial-loading\nmdid\tibiaModel_isoAnkleForce_disp_out.txt
+
+Data Record #2
+===========================================================================
+Step = 10
+Time = 1
+Data = s1;s2;s3
+File = C:\+GitRepos+\tibial-geometry\piloting\tibial-loading\nmdid\tibiaModel_isoAnkleForce_stress_out.txt
+
+Data Record #3
+===========================================================================
+Step = 10
+Time = 1
+Data = sed
+File = C:\+GitRepos+\tibial-geometry\piloting\tibial-loading\nmdid\tibiaModel_isoAnkleForce_energy_out.txt
+
+
+ N O N L I N E A R   I T E R A T I O N   I N F O R M A T I O N
+
+	Number of time steps completed .................... : 10
+
+	Total number of equilibrium iterations ............ : 30
+
+	Average number of equilibrium iterations .......... : 3
+
+	Total number of right hand evaluations ............ : 40
+
+	Total number of stiffness reformations ............ : 30
+
+
+ L I N E A R   S O L V E R   S T A T S
+
+	Total calls to linear solver ........ : 30
+
+	Avg iterations per solve ............ : 1
+
+	Time in linear solver: 0:00:10
+
+ Peak memory  : 234.4 MB
+
+ Elapsed time : 0:00:18
+
+ T I M I N G   I N F O R M A T I O N
+
+	Input time ...................... : 0:00:00 (0.16 sec)
+
+	Initialization time ............. : 0:00:00 (0.081 sec)
+
+	Solve time ...................... : 0:00:18 (17.964 sec)
+
+	   IO-time (plot, dmp, data) .... : 0:00:04 (4.127 sec)
+
+	   reforming stiffness .......... : 0:00:00 (0.085 sec)
+
+	   evaluating stiffness ......... : 0:00:02 (1.976 sec)
+
+	   evaluating residual .......... : 0:00:00 (0.128 sec)
+
+	   model update ................. : 0:00:00 (0.231 sec)
+
+	   QN updates ................... : 0:00:00 (0 sec)
+
+	   time in linear solver ........ : 0:00:10 (10.471 sec)
+
+	Total elapsed time .............. : 0:00:18 (18.205 sec)
+
+
+ N O R M A L   T E R M I N A T I O N
+
