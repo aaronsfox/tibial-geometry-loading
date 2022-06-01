@@ -12,5 +12,5 @@ We only used a selection of necessary files from the [original dataset](https://
 
 - **extractHamnerDelpData.m**: This script contains the code to extract and rename the relevant files from the Hamner & Delp (2013) dataset. See comments above on this process.
 - **processHamnerDelpData.m:** This script contains the code we used to process the running data from Hamner & Delp (2013) and perform the extra analyses on this for use in our finite element simulations.
-- **collateHamnerDelpData.m:** This script contains the code to collate and summarise the Hamner & Delp (2013) for use in the finite element simulations.
+- **compileHamnerDelpData.m:** This script contains the code to collate and summarise the Hamner & Delp (2013) for use in the finite element simulations.
 
