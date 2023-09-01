@@ -1,0 +1,14 @@
+[2022-05-11 19:49:32.932] [info] Updating Model file from 20302 to latest format...
+[2022-05-11 19:49:33.099] [info] Loaded model modelModified from file C:\+GitRepos+\tibial-geometry-loading\HamnerDelp2013-RunningData\Data\subject17\Run_5\cycle2\Run_5_cycle2_model.osim
+[2022-05-11 19:49:33.702] [info] ControllerSet 'Controllers' was renamed and is being reset to 'controllerset'.
+[2022-05-11 19:49:48.913] [info] Storage: read data file = C:\+GitRepos+\tibial-geometry-loading\HamnerDelp2013-RunningData\Data\subject17\Run_5\cycle2\Run_5_cycle2_kinematics.sto (nr=609 nc=38)
+[2022-05-11 19:50:01.789] [info] Old version storage/motion file encountered
+[2022-05-11 19:50:01.789] [info] Storage: read data file = C:\+GitRepos+\tibial-geometry-loading\HamnerDelp2013-RunningData\Data\subject17\Run_5\cycle2\Run_5_cycle2_grf.mot (nr=4513 nc=19)
+[2022-05-11 19:50:01.790] [info] .. assuming rotations in Degrees..
+[2022-05-11 19:50:22.525] [info] Updating Model file from 20302 to latest format...
+[2022-05-11 19:50:22.592] [info] Loaded model modelModified from file C:\+GitRepos+\tibial-geometry-loading\HamnerDelp2013-RunningData\Data\subject08\Run_3\cycle2\Run_3_cycle2_model.osim
+[2022-05-11 19:50:22.606] [info] ControllerSet 'Controllers' was renamed and is being reset to 'controllerset'.
+[2022-05-11 19:50:28.680] [info] Storage: read data file = C:\+GitRepos+\tibial-geometry-loading\HamnerDelp2013-RunningData\Data\subject08\Run_3\cycle2\Run_3_cycle2_kinematics.sto (nr=627 nc=38)
+[2022-05-11 19:50:33.214] [info] Old version storage/motion file encountered
+[2022-05-11 19:50:33.214] [info] Storage: read data file = C:\+GitRepos+\tibial-geometry-loading\HamnerDelp2013-RunningData\Data\subject08\Run_3\cycle2\Run_3_cycle2_grf.mot (nr=5281 nc=19)
+[2022-05-11 19:50:33.214] [info] .. assuming rotations in Degrees..

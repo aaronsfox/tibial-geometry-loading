@@ -1,0 +1,18 @@
+[2022-06-03 13:04:46.464] [info] Updating Model file from 20302 to latest format...
+[2022-06-03 13:04:46.559] [info] Loaded model modelModified from file Run_4_cycle2_model.osim
+[2022-06-03 13:04:46.585] [info] ControllerSet 'Controllers' was renamed and is being reset to 'controllerset'.
+[2022-06-03 13:04:46.712] [info] Storage: read data file = Run_4_cycle2_states.sto (nr=2037 nc=259)
+[2022-06-03 13:04:47.246] [info] Storage: read data file = Run_4_cycle2_states.sto (nr=2037 nc=259)
+[2022-06-03 13:04:47.836] [info] AbstractTool Run_4_cycle2 loading model Run_4_cycle2_model_noMuscles.osim
+[2022-06-03 13:04:47.904] [info] Loaded model modelModified from file Run_4_cycle2_model_noMuscles.osim
+[2022-06-03 13:04:48.005] [info] ExternalLoads 'ExternalLoads' was renamed and is being reset to 'externalloads'.
+[2022-06-03 13:04:48.072] [info] Old version storage/motion file encountered
+[2022-06-03 13:04:48.072] [info] Storage: read data file = Run_4_cycle2_grf.mot (nr=5553 nc=19)
+[2022-06-03 13:04:48.072] [info] .. assuming rotations in Degrees..
+[2022-06-03 13:04:48.170] [info] ExternalForce::RightFoot_ExternalForce Data source being set to Run_400 01_newCOP3_v24.mot
+[2022-06-03 13:04:48.170] [info] ExternalForce::LeftFoot_ExternalForce Data source being set to Run_400 01_newCOP3_v24.mot
+[2022-06-03 13:04:48.181] [info] Loading states from file 'Run_4_cycle2_states.sto'.
+[2022-06-03 13:04:48.182] [info] Storage: read data file = Run_4_cycle2_states.sto (nr=2037 nc=259)
+[2022-06-03 13:04:48.739] [info] Found 2037 state vectors with time stamps ranging from 0.760210 to 1.36821.
+[2022-06-03 13:04:48.739] [info] Executing the analyses from 0.760210 to 1.36821...
+[2022-06-03 13:04:52.628] [info] Printing results of investigation Run_4_cycle2 to ./
