@@ -1,0 +1,22 @@
+Non-Parametric Regression Results: Cortical-Trabecular PC4
+
+SnPM{t} inference (1D)
+              z: [1×3037 double]
+    nPermUnique: 2.6525e+32
+    nPermActual: 1000
+          alpha: 0.0500
+          zstar: 3.7760
+       h0reject: 0
+              p: [1×0 double]
+
+Non-Parametric Regression Results: Cortical-Trabecular PC4
+
+SnPM{t} inference (1D)
+              z: [1×3037 double]
+    nPermUnique: 2.6525e+32
+    nPermActual: 1000
+          alpha: 0.0500
+          zstar: 3.7760
+       h0reject: 0
+              p: [1×0 double]
+
