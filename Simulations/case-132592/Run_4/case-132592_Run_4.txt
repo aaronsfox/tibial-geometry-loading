@@ -1,0 +1,624 @@
+===========================================================================
+         ________    _________   _______       __     _________            
+        |        |\ |        |\ |       \\    |  |\  /         \\          
+        |    ____|| |    ____|| |    __  ||   |__|| |    ___    ||         
+        |   |\___\| |   |\___\| |   |\_| ||    \_\| |   //  \   ||         
+        |   ||__    |   ||__    |   ||_| ||   |  |\ |  ||    |  ||         
+        |       |\  |       |\  |         \\  |  || |  ||    |  ||         
+        |    ___||  |    ___||  |    ___   || |  || |  ||    |  ||         
+        |   |\__\|  |   |\__\|  |   |\__|  || |  || |  ||    |  ||         
+        |   ||      |   ||___   |   ||__|  || |  || |   \\__/   ||         
+        |   ||      |        |\ |          || |  || |           ||         
+        |___||      |________|| |_________//  |__||  \_________//          
+                                                                           
+      F I N I T E   E L E M E N T S   F O R   B I O M E C H A N I C S      
+                                                                           
+  version 3.7.0
+  FEBio is a registered trademark.                                         
+  copyright (c) 2006-2021 - All rights reserved                            
+                                                                           
+===========================================================================
+
+
+
+
+
+ FILES USED
+===========================================================================
+	Input file : C:\+GitRepos+\tibial-geometry-loading\Simulations\case-132592\Run_4\case-132592_Run_4.feb
+	Plot file  : C:\+GitRepos+\tibial-geometry-loading\Simulations\case-132592\Run_4\case-132592_Run_4.xplt
+	Log file   : C:\+GitRepos+\tibial-geometry-loading\Simulations\case-132592\Run_4\case-132592_Run_4.txt
+
+
+ MESH INFO
+===========================================================================
+	Number of materials ............................ : 7
+	Number of domains .............................. : 7
+	Number of nodes ................................ : 52580
+	Number of solid elements ....................... : 300685
+
+
+ CONTROL DATA
+===========================================================================
+	Module type .................................... : solid
+	Analysis type .................................. : quasi-static
+	Number of timesteps ............................ : 1
+	Time step size ................................. : 1
+	Auto time stepper activated .................... : yes
+	  Optimal nr of iterations ..................... : 6
+	  Minimum allowable step size .................. : 0.01
+	  Maximum allowable step size .................. : 1
+	Number of load controllers ..................... : 1
+
+
+ SOLVER PARAMETERS
+===========================================================================
+	symmetric_stiffness ............................... : 1
+	equation_scheme ................................... : 0
+	equation_order .................................... : 0
+	optimize_bw ....................................... : 0
+	lstol ............................................. : 0.9
+	lsmin ............................................. : 0.01
+	lsiter ............................................ : 5
+	max_refs .......................................... : 25
+	check_zero_diagonal ............................... : false
+	zero_diagonal_tol ................................. : 0
+	force_partition ................................... : 0
+	reform_each_time_step ............................. : true
+	reform_augment .................................... : false
+	diverge_reform .................................... : true
+	do_reforms ........................................ : true
+	etol .............................................. : 0.01
+	rtol .............................................. : 0
+	min_residual ...................................... : 1e-20
+	max_residual ...................................... : 0
+	qnmethod .......................................... : 0
+	max_ups ........................................... : 0
+	qn_max_buffer_size ................................ : 0
+	qn_cycle_buffer ................................... : true
+	cmax .............................................. : 100000
+	dtol .............................................. : 0.001
+	rhoi .............................................. : -2
+	alpha ............................................. : 1
+	beta .............................................. : 0.25
+	gamma ............................................. : 0.5
+	logSolve .......................................... : false
+	arc_length ........................................ : 0
+	arc_length_scale .................................. : 0
+
+
+ OUTPUT DATA
+===========================================================================
+	plot level ................................ : major iterations
+	plotfile format ........................... : FEBIO
+		Nodal Variables:
+			displacement         (type = vec3f, format = NODE)
+			reaction forces      (type = vec3f, format = NODE)
+		Domain Variables:
+			stress               (type = mat3fs, format = ITEM)
+			relative volume      (type = float, format = ITEM)
+		Surface Variables:
+			contact pressure     (type = float, format = ITEM)
+
+
+ MATERIAL DATA
+===========================================================================
+  1 - corticalTibia (type: orthotropic elastic)
+	mat_axis .......................................... : (can't display value)
+	density ........................................... : 1
+	secant_tangent .................................... : false
+	secant_stress ..................................... : false
+	E1 ................................................ : 10732.2
+	E2 ................................................ : 18600
+	E3 ................................................ : 10676.4
+	G12 ............................................... : 4929
+	G23 ............................................... : 4017.6
+	G31 ............................................... : 3627
+	v12 ............................................... : 0.234
+	v23 ............................................... : 0.405
+	v31 ............................................... : 0.427
+---------------------------------------------------------------------------
+  2 - trabTibia (type: orthotropic elastic)
+	mat_axis .......................................... : (can't display value)
+	density ........................................... : 1
+	secant_tangent .................................... : false
+	secant_stress ..................................... : false
+	E1 ................................................ : 6000.8
+	E2 ................................................ : 10400
+	E3 ................................................ : 5969.6
+	G12 ............................................... : 2756
+	G23 ............................................... : 2246.4
+	G31 ............................................... : 2028
+	v12 ............................................... : 0.234
+	v23 ............................................... : 0.405
+	v31 ............................................... : 0.427
+---------------------------------------------------------------------------
+  3 - corticalFibula (type: orthotropic elastic)
+	mat_axis .......................................... : (can't display value)
+	density ........................................... : 1
+	secant_tangent .................................... : false
+	secant_stress ..................................... : false
+	E1 ................................................ : 10732.2
+	E2 ................................................ : 18600
+	E3 ................................................ : 10676.4
+	G12 ............................................... : 4929
+	G23 ............................................... : 4017.6
+	G31 ............................................... : 3627
+	v12 ............................................... : 0.234
+	v23 ............................................... : 0.405
+	v31 ............................................... : 0.427
+---------------------------------------------------------------------------
+  4 - AntProxSpring (type: linear spring)
+	mat_axis .......................................... : (can't display value)
+	E ................................................. : 133
+---------------------------------------------------------------------------
+  5 - PostProxSpring (type: linear spring)
+	mat_axis .......................................... : (can't display value)
+	E ................................................. : 109
+---------------------------------------------------------------------------
+  6 - AntDistSpring (type: linear spring)
+	mat_axis .......................................... : (can't display value)
+	E ................................................. : 78
+---------------------------------------------------------------------------
+  7 - PostDistSpring (type: linear spring)
+	mat_axis .......................................... : (can't display value)
+	E ................................................. : 101
+
+
+ BOUNDARY CONDITION DATA
+===========================================================================
+  1 -  Type: fix
+	dofs .............................................. : 0, 1, 2
+---------------------------------------------------------------------------
+  2 -  Type: fix
+	dofs .............................................. : 0, 1, 2
+
+
+ NODAL LOAD DATA
+===========================================================================
+  1 -  Type: nodal_force
+	relative .......................................... : false
+	value ............................................. : (not constant)
+---------------------------------------------------------------------------
+  2 -  Type: nodal_force
+	relative .......................................... : false
+	value ............................................. : (not constant)
+---------------------------------------------------------------------------
+  3 -  Type: nodal_force
+	relative .......................................... : false
+	value ............................................. : (not constant)
+---------------------------------------------------------------------------
+  4 -  Type: nodal_force
+	relative .......................................... : false
+	value ............................................. : (not constant)
+---------------------------------------------------------------------------
+  5 -  Type: nodal_force
+	relative .......................................... : false
+	value ............................................. : (not constant)
+---------------------------------------------------------------------------
+  6 -  Type: nodal_force
+	relative .......................................... : false
+	value ............................................. : (not constant)
+---------------------------------------------------------------------------
+  7 -  Type: nodal_force
+	relative .......................................... : false
+	value ............................................. : (not constant)
+---------------------------------------------------------------------------
+  8 -  Type: nodal_force
+	relative .......................................... : false
+	value ............................................. : (not constant)
+---------------------------------------------------------------------------
+  9 -  Type: nodal_force
+	relative .......................................... : false
+	value ............................................. : (not constant)
+---------------------------------------------------------------------------
+ 10 -  Type: nodal_force
+	relative .......................................... : false
+	value ............................................. : (not constant)
+---------------------------------------------------------------------------
+ 11 -  Type: nodal_force
+	relative .......................................... : false
+	value ............................................. : (not constant)
+---------------------------------------------------------------------------
+ 12 -  Type: nodal_force
+	relative .......................................... : false
+	value ............................................. : (not constant)
+---------------------------------------------------------------------------
+ 13 -  Type: nodal_force
+	relative .......................................... : false
+	value ............................................. : (not constant)
+---------------------------------------------------------------------------
+ 14 -  Type: nodal_force
+	relative .......................................... : false
+	value ............................................. : (not constant)
+---------------------------------------------------------------------------
+ 15 -  Type: nodal_force
+	relative .......................................... : false
+	value ............................................. : (not constant)
+---------------------------------------------------------------------------
+ 16 -  Type: nodal_force
+	relative .......................................... : false
+	value ............................................. : (not constant)
+---------------------------------------------------------------------------
+ 17 -  Type: nodal_force
+	relative .......................................... : false
+	value ............................................. : (not constant)
+---------------------------------------------------------------------------
+ 18 -  Type: nodal_force
+	relative .......................................... : false
+	value ............................................. : (not constant)
+
+
+ CONTACT INTERFACE DATA
+===========================================================================
+contact interface 1 - Type: tied-elastic
+	laugon ............................................ : 0
+	penalty_sf ........................................ : 1
+	max_penalty_sf .................................... : 0
+	tolerance ......................................... : 0.1
+	gaptol ............................................ : -1
+	penalty ........................................... : 1
+	auto_penalty ...................................... : false
+	update_penalty .................................... : false
+	two_pass .......................................... : false
+	knmult ............................................ : 1
+	search_tol ........................................ : 0.01
+	symmetric_stiffness ............................... : true
+	search_radius ..................................... : 1
+	minaug ............................................ : 0
+	maxaug ............................................ : 10
+
+
+ LINEAR SOLVER DATA
+===========================================================================
+	Solver type ....................................... : pardiso
+	Matrix format ..................................... : symmetric
+
+
+===== beginning time step 1 : 1 =====
+
+
+Reforming stiffness matrix: reformation #1
+
+===== reforming stiffness matrix:
+	Nr of equations ........................... : 157200
+	Nr of nonzeroes in stiffness matrix ....... : 3567999
+ 1
+ Nonlinear solution status: time= 1
+	stiffness updates             = 0
+	right hand side evaluations   = 3
+	stiffness matrix reformations = 1
+	step from line search         = 0.441387
+	convergence norms :     INITIAL         CURRENT         REQUIRED
+	   residual            1.008661e+08    4.741630e+07    0.000000e+00 
+	   energy              1.116102e+04    1.578924e+03    1.116102e+02 
+	   displacement        9.064310e+04    1.765929e+04    1.765929e-02 
+Reforming stiffness matrix: reformation #2
+
+===== reforming stiffness matrix:
+	Nr of equations ........................... : 157200
+	Nr of nonzeroes in stiffness matrix ....... : 3567999
+ 2
+ Nonlinear solution status: time= 1
+	stiffness updates             = 0
+	right hand side evaluations   = 4
+	stiffness matrix reformations = 2
+	step from line search         = 1.000000
+	convergence norms :     INITIAL         CURRENT         REQUIRED
+	   residual            1.008661e+08    9.612118e+05    0.000000e+00 
+	   energy              1.116102e+04    3.709768e+02    1.116102e+02 
+	   displacement        9.064310e+04    1.212399e+04    4.740043e-02 
+Reforming stiffness matrix: reformation #3
+
+===== reforming stiffness matrix:
+	Nr of equations ........................... : 157200
+	Nr of nonzeroes in stiffness matrix ....... : 3567999
+ 3
+ Nonlinear solution status: time= 1
+	stiffness updates             = 0
+	right hand side evaluations   = 6
+	stiffness matrix reformations = 3
+	step from line search         = 0.617755
+	convergence norms :     INITIAL         CURRENT         REQUIRED
+	   residual            1.008661e+08    1.073513e+06    0.000000e+00 
+	   energy              1.116102e+04    3.573570e+01    1.116102e+02 
+	   displacement        9.064310e+04    3.420055e+03    6.665219e-02 
+Reforming stiffness matrix: reformation #4
+
+===== reforming stiffness matrix:
+	Nr of equations ........................... : 157200
+	Nr of nonzeroes in stiffness matrix ....... : 3567999
+ 4
+ Nonlinear solution status: time= 1
+	stiffness updates             = 0
+	right hand side evaluations   = 7
+	stiffness matrix reformations = 4
+	step from line search         = 1.000000
+	convergence norms :     INITIAL         CURRENT         REQUIRED
+	   residual            1.008661e+08    2.145050e+05    0.000000e+00 
+	   energy              1.116102e+04    2.929869e+01    1.116102e+02 
+	   displacement        9.064310e+04    2.254397e+03    8.585384e-02 
+Reforming stiffness matrix: reformation #5
+
+===== reforming stiffness matrix:
+	Nr of equations ........................... : 157200
+	Nr of nonzeroes in stiffness matrix ....... : 3567999
+ 5
+ Nonlinear solution status: time= 1
+	stiffness updates             = 0
+	right hand side evaluations   = 8
+	stiffness matrix reformations = 5
+	step from line search         = 1.000000
+	convergence norms :     INITIAL         CURRENT         REQUIRED
+	   residual            1.008661e+08    1.727276e+05    0.000000e+00 
+	   energy              1.116102e+04    7.368618e+00    1.116102e+02 
+	   displacement        9.064310e+04    1.753825e+03    1.013442e-01 
+Reforming stiffness matrix: reformation #6
+
+===== reforming stiffness matrix:
+	Nr of equations ........................... : 157200
+	Nr of nonzeroes in stiffness matrix ....... : 3567999
+ 6
+ Nonlinear solution status: time= 1
+	stiffness updates             = 0
+	right hand side evaluations   = 9
+	stiffness matrix reformations = 6
+	step from line search         = 1.000000
+	convergence norms :     INITIAL         CURRENT         REQUIRED
+	   residual            1.008661e+08    1.871242e+02    0.000000e+00 
+	   energy              1.116102e+04    2.159533e-01    1.116102e+02 
+	   displacement        9.064310e+04    6.157757e+01    1.049614e-01 
+Reforming stiffness matrix: reformation #7
+
+===== reforming stiffness matrix:
+	Nr of equations ........................... : 157200
+	Nr of nonzeroes in stiffness matrix ....... : 3567999
+ 7
+ Nonlinear solution status: time= 1
+	stiffness updates             = 0
+	right hand side evaluations   = 11
+	stiffness matrix reformations = 7
+	step from line search         = 0.087995
+	convergence norms :     INITIAL         CURRENT         REQUIRED
+	   residual            1.008661e+08    2.242581e+02    0.000000e+00 
+	   energy              1.116102e+04    4.982424e-02    1.116102e+02 
+	   displacement        9.064310e+04    2.332592e+01    1.052208e-01 
+Reforming stiffness matrix: reformation #8
+
+===== reforming stiffness matrix:
+	Nr of equations ........................... : 157200
+	Nr of nonzeroes in stiffness matrix ....... : 3567999
+ 8
+ Nonlinear solution status: time= 1
+	stiffness updates             = 0
+	right hand side evaluations   = 13
+	stiffness matrix reformations = 8
+	step from line search         = 0.249961
+	convergence norms :     INITIAL         CURRENT         REQUIRED
+	   residual            1.008661e+08    4.811330e+02    0.000000e+00 
+	   energy              1.116102e+04    4.568594e-02    1.116102e+02 
+	   displacement        9.064310e+04    4.091933e+01    1.057250e-01 
+Reforming stiffness matrix: reformation #9
+
+===== reforming stiffness matrix:
+	Nr of equations ........................... : 157200
+	Nr of nonzeroes in stiffness matrix ....... : 3567999
+ 9
+ Nonlinear solution status: time= 1
+	stiffness updates             = 0
+	right hand side evaluations   = 14
+	stiffness matrix reformations = 9
+	step from line search         = 1.000000
+	convergence norms :     INITIAL         CURRENT         REQUIRED
+	   residual            1.008661e+08    3.079749e+03    0.000000e+00 
+	   energy              1.116102e+04    1.184428e-01    1.116102e+02 
+	   displacement        9.064310e+04    1.640831e+02    1.071463e-01 
+Reforming stiffness matrix: reformation #10
+
+===== reforming stiffness matrix:
+	Nr of equations ........................... : 157200
+	Nr of nonzeroes in stiffness matrix ....... : 3567999
+ 10
+ Nonlinear solution status: time= 1
+	stiffness updates             = 0
+	right hand side evaluations   = 15
+	stiffness matrix reformations = 10
+	step from line search         = 1.000000
+	convergence norms :     INITIAL         CURRENT         REQUIRED
+	   residual            1.008661e+08    2.829483e+01    0.000000e+00 
+	   energy              1.116102e+04    3.402664e-02    1.116102e+02 
+	   displacement        9.064310e+04    1.580264e+01    1.074350e-01 
+Reforming stiffness matrix: reformation #11
+
+===== reforming stiffness matrix:
+	Nr of equations ........................... : 157200
+	Nr of nonzeroes in stiffness matrix ....... : 3567999
+ 11
+ Nonlinear solution status: time= 1
+	stiffness updates             = 0
+	right hand side evaluations   = 17
+	stiffness matrix reformations = 11
+	step from line search         = 0.328663
+	convergence norms :     INITIAL         CURRENT         REQUIRED
+	   residual            1.008661e+08    1.818529e+02    0.000000e+00 
+	   energy              1.116102e+04    1.648061e-02    1.116102e+02 
+	   displacement        9.064310e+04    2.992777e+01    1.078981e-01 
+Reforming stiffness matrix: reformation #12
+
+===== reforming stiffness matrix:
+	Nr of equations ........................... : 157200
+	Nr of nonzeroes in stiffness matrix ....... : 3567999
+ 12
+ Nonlinear solution status: time= 1
+	stiffness updates             = 0
+	right hand side evaluations   = 18
+	stiffness matrix reformations = 12
+	step from line search         = 1.000000
+	convergence norms :     INITIAL         CURRENT         REQUIRED
+	   residual            1.008661e+08    5.031043e+02    0.000000e+00 
+	   energy              1.116102e+04    4.210966e-03    1.116102e+02 
+	   displacement        9.064310e+04    6.738077e+01    1.086872e-01 
+Reforming stiffness matrix: reformation #13
+
+===== reforming stiffness matrix:
+	Nr of equations ........................... : 157200
+	Nr of nonzeroes in stiffness matrix ....... : 3567999
+ 13
+ Nonlinear solution status: time= 1
+	stiffness updates             = 0
+	right hand side evaluations   = 19
+	stiffness matrix reformations = 13
+	step from line search         = 1.000000
+	convergence norms :     INITIAL         CURRENT         REQUIRED
+	   residual            1.008661e+08    1.813828e+01    0.000000e+00 
+	   energy              1.116102e+04    1.025881e-02    1.116102e+02 
+	   displacement        9.064310e+04    1.266994e+01    1.090545e-01 
+Reforming stiffness matrix: reformation #14
+
+===== reforming stiffness matrix:
+	Nr of equations ........................... : 157200
+	Nr of nonzeroes in stiffness matrix ....... : 3567999
+ 14
+ Nonlinear solution status: time= 1
+	stiffness updates             = 0
+	right hand side evaluations   = 20
+	stiffness matrix reformations = 14
+	step from line search         = 1.000000
+	convergence norms :     INITIAL         CURRENT         REQUIRED
+	   residual            1.008661e+08    1.778177e+02    0.000000e+00 
+	   energy              1.116102e+04    7.671860e-03    1.116102e+02 
+	   displacement        9.064310e+04    3.978830e+01    1.097760e-01 
+Reforming stiffness matrix: reformation #15
+
+===== reforming stiffness matrix:
+	Nr of equations ........................... : 157200
+	Nr of nonzeroes in stiffness matrix ....... : 3567999
+ 15
+ Nonlinear solution status: time= 1
+	stiffness updates             = 0
+	right hand side evaluations   = 21
+	stiffness matrix reformations = 15
+	step from line search         = 1.000000
+	convergence norms :     INITIAL         CURRENT         REQUIRED
+	   residual            1.008661e+08    2.413656e-01    0.000000e+00 
+	   energy              1.116102e+04    7.860809e-04    1.116102e+02 
+	   displacement        9.064310e+04    1.447447e+00    1.099146e-01 
+Reforming stiffness matrix: reformation #16
+
+===== reforming stiffness matrix:
+	Nr of equations ........................... : 157200
+	Nr of nonzeroes in stiffness matrix ....... : 3567999
+ 16
+ Nonlinear solution status: time= 1
+	stiffness updates             = 0
+	right hand side evaluations   = 22
+	stiffness matrix reformations = 16
+	step from line search         = 1.000000
+	convergence norms :     INITIAL         CURRENT         REQUIRED
+	   residual            1.008661e+08    1.138740e+00    0.000000e+00 
+	   energy              1.116102e+04    3.046353e-05    1.116102e+02 
+	   displacement        9.064310e+04    3.170719e+00    1.101331e-01 
+Reforming stiffness matrix: reformation #17
+
+===== reforming stiffness matrix:
+	Nr of equations ........................... : 157200
+	Nr of nonzeroes in stiffness matrix ....... : 3567999
+ 17
+ Nonlinear solution status: time= 1
+	stiffness updates             = 0
+	right hand side evaluations   = 23
+	stiffness matrix reformations = 17
+	step from line search         = 1.000000
+	convergence norms :     INITIAL         CURRENT         REQUIRED
+	   residual            1.008661e+08    6.609546e-06    0.000000e+00 
+	   energy              1.116102e+04    3.369368e-07    1.116102e+02 
+	   displacement        9.064310e+04    7.555102e-03    1.101434e-01 
+
+convergence summary
+    number of iterations   : 17
+    number of reformations : 17
+
+------- converged at time : 1
+
+
+Data Record #1
+===========================================================================
+Step = 1
+Time = 1
+Data = ux;uy;uz
+File = C:\+GitRepos+\tibial-geometry-loading\Simulations\case-132592\Run_4\case-132592_Run_4_disp_out.txt
+
+Data Record #2
+===========================================================================
+Step = 1
+Time = 1
+Data = effective stress
+File = C:\+GitRepos+\tibial-geometry-loading\Simulations\case-132592\Run_4\case-132592_Run_4_stress_out.txt
+
+Data Record #3
+===========================================================================
+Step = 1
+Time = 1
+Data = E1;E2;E3
+File = C:\+GitRepos+\tibial-geometry-loading\Simulations\case-132592\Run_4\case-132592_Run_4_strain_out.txt
+
+Data Record #4
+===========================================================================
+Step = 1
+Time = 1
+Data = effective strain
+File = C:\+GitRepos+\tibial-geometry-loading\Simulations\case-132592\Run_4\case-132592_Run_4_effectiveStrain_out.txt
+
+
+ N O N L I N E A R   I T E R A T I O N   I N F O R M A T I O N
+
+	Number of time steps completed .................... : 1
+
+	Total number of equilibrium iterations ............ : 17
+
+	Average number of equilibrium iterations .......... : 17
+
+	Total number of right hand evaluations ............ : 23
+
+	Total number of stiffness reformations ............ : 17
+
+
+ L I N E A R   S O L V E R   S T A T S
+
+	Total calls to linear solver ........ : 17
+
+	Avg iterations per solve ............ : 1
+
+	Time in linear solver: 0:00:46
+
+ Peak memory  : 1530.1 MB
+
+ Elapsed time : 0:01:01
+
+ T I M I N G   I N F O R M A T I O N
+
+	Input time ...................... : 0:00:01 (0.548 sec)
+
+	Initialization time ............. : 0:00:01 (0.754 sec)
+
+	Solve time ...................... : 0:01:01 (60.642 sec)
+
+	   IO-time (plot, dmp, data) .... : 0:00:01 (1.335 sec)
+
+	   reforming stiffness .......... : 0:00:03 (3.04 sec)
+
+	   evaluating stiffness ......... : 0:00:07 (6.936 sec)
+
+	   evaluating residual .......... : 0:00:01 (1.489 sec)
+
+	   model update ................. : 0:00:01 (1.467 sec)
+
+	   QN updates ................... : 0:00:00 (0 sec)
+
+	   time in linear solver ........ : 0:00:46 (46.153 sec)
+
+	Total elapsed time .............. : 0:01:02 (61.944 sec)
+
+
+ N O R M A L   T E R M I N A T I O N
+
