@@ -105,7 +105,9 @@ function analyseSimulations()
         caseID_label = ['case',num2str(simulateCases(caseInd))];
 
         %Load the data for the current case
-        load(['..\Results\processedSimulationData_',caseID,'.mat']);
+        % % % load(['..\Results\processedSimulationData_',caseID,'.mat']);
+        load(['..\Results\processedSimulationData_',caseID,'_meshData.mat']);
+        load(['..\Results\processedSimulationData_',caseID,'_simData.mat']);
         
         %Create a variable that collates the element numbers for the meshes
         tibialElementN(caseInd) = length(meshDataCase.meshOutputFullTibia.elements);

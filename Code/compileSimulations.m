@@ -406,7 +406,9 @@ function compileSimulations()
         simDataCase = simData.(char(caseID_label));
 
         %Save desired variables to file
-        save(['..\Results\processedSimulationData_',caseID,'.mat'], 'meshDataCase', 'simDataCase');
+        % % % save(['..\Results\processedSimulationData_',caseID,'.mat'], 'meshDataCase', 'simDataCase');
+        save(['..\Results\processedSimulationData_',caseID,'_meshData.mat'], 'meshDataCase');
+        save(['..\Results\processedSimulationData_',caseID,'_simData.mat'], 'simDataCase');
 
         %Cleanup variables that will take up substantial memory in the
         %loading of simulation data
